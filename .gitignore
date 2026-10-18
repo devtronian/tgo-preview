@@ -1,0 +1,17 @@
+# Local QA and generated deployment packages
+/output/
+/.playwright-cli/
+**/node_modules/
+*.stackdump
+*.log
+
+# Local settings and credentials
+/.codex/
+/.agents/
+/.aws/
+.env
+.env.*
+!.env.example
+.production.env
+.DS_Store
+Thumbs.db
