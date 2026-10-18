@@ -2,6 +2,10 @@
 
 โปรเจกต์เว็บไซต์บริษัทจัดหางาน 6 เวอร์ชัน แบบ static HTML/CSS/JavaScript พร้อมรองรับ GitHub Pages
 
+เว็บพรีวิว: https://devtronian.github.io/tgo-preview/
+
+Repository: https://github.com/devtronian/tgo-preview
+
 เปิด `index.html` เพื่อเลือกแบบ หรือเปิดหน้าแต่ละเวอร์ชันโดยตรง:
 
 | โฟลเดอร์ | แนวทาง | ภาษาอังกฤษ |
@@ -54,21 +58,20 @@ python -m http.server 4173 --bind 127.0.0.1
 ตัวอย่าง repository ชื่อ `tgo-preview`:
 
 ```text
-https://YOUR_USERNAME.github.io/tgo-preview/       หน้าเลือกแบบ
-https://YOUR_USERNAME.github.io/tgo-preview/v1/   แบบที่ 1
-https://YOUR_USERNAME.github.io/tgo-preview/v6/   แบบที่ 6
+https://devtronian.github.io/tgo-preview/       หน้าเลือกแบบ
+https://devtronian.github.io/tgo-preview/v1/   แบบที่ 1
+https://devtronian.github.io/tgo-preview/v6/   แบบที่ 6
 ```
 
-ตั้ง Git ในเครื่องเป็น branch `main` แล้ว เมื่อต้องการอัปโหลด ให้สร้าง repository บน GitHub ก่อน แล้วเชื่อม remote ของคุณ
+เชื่อม branch `main` กับ `origin/main` ที่ `devtronian/tgo-preview` แล้ว เมื่อต้องการอัปเดตเว็บ:
 
 ```powershell
 git add .
-git commit -m "Organize website design versions"
-git remote add origin https://github.com/YOUR_USERNAME/tgo-preview.git
-git push -u origin main
+git commit -m "Update website designs"
+git push
 ```
 
-ขั้นตอนข้างต้นเป็นคำแนะนำ ยังไม่ได้สร้าง remote repository, commit หรือ push อัตโนมัติ
+GitHub Pages ใช้ branch `main` และโฟลเดอร์ `/ (root)` การ push จะเริ่มเผยแพร่ไฟล์เวอร์ชันใหม่
 
 หากต้องการอัปโหลดเฉพาะไฟล์เว็บที่ใช้แสดงผล ให้ใช้ชุด `output/github-pages/` หรือ `output/tgo-github-pages.zip` ที่จัดไว้แล้ว ชุด export ตั้งทุกหน้าเป็น noindex และตัด URL SEO สมมติออก ส่วนโปรเจกต์หลักเก็บต้นฉบับสำหรับแก้ไขต่อไว้ด้วย
 
