@@ -32,6 +32,7 @@ export const NAV = [
   { id: "services", file: "services.html", th: "บริการ", en: "Services" },
   { id: "process", file: "process.html", th: "ขั้นตอนการสมัคร", en: "How it works" },
   { id: "about", file: "about.html", th: "เกี่ยวกับเรา", en: "About" },
+  { id: "profile", file: "profile.html", th: "โปรไฟล์บริษัท", en: "Profile" },
   { id: "contact", file: "contact.html", th: "ติดต่อเรา", en: "Contact" }
 ];
 
@@ -53,14 +54,11 @@ export const SECTORS = {
   hospitality: { th: "งานบริการ สปา และครัว", en: "Hospitality & spa", icon: "lotus" }
 };
 
-/* Colour themes offered in the theme panel. `auto` follows the device (light/dark).
-   Colour values live in assets/css/site.css under [data-theme="…"]. */
+/* Colour themes in the display panel. Until a visitor picks one, the site follows the device
+   (html[data-theme="auto"]). Colour values live in assets/css/site.css under [data-theme="…"]. */
 export const THEMES = [
-  { id: "auto", th: "ตามอุปกรณ์", en: "Match device", sw: ["#f4f6f5", "#0a111c", "#f2a900"] },
-  { id: "workday", th: "กลางวัน", en: "Workday", sw: ["#f4f6f5", "#14306b", "#f2a900"] },
-  { id: "night", th: "กะกลางคืน", en: "Night shift", sw: ["#0a111c", "#8fb2ff", "#ffc233"] },
-  { id: "sage", th: "เขียวใบชา", en: "Sage", sw: ["#eef2ec", "#1e5a3e", "#e9a23b"] },
-  { id: "contrast", th: "อ่านง่าย คมชัด", en: "High contrast", sw: ["#ffffff", "#000000", "#ffd400"] }
+  { id: "light", th: "สว่าง", en: "Light", icon: "sun" },
+  { id: "dark", th: "มืด", en: "Dark", icon: "moon" }
 ];
 
 /* Animated visuals for the home page hero, chosen in the display panel (stored as data-hero).

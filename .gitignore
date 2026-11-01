@@ -5,6 +5,10 @@
 *.stackdump
 *.log
 
+# Company source files (PSD, original photos, docx, ~880 MB). The site uses the converted
+# copies in v6/assets/profile/, made by v6/_build/profile-pages.py from this folder.
+/docs/
+
 # Local settings and credentials
 /.codex/
 /.agents/

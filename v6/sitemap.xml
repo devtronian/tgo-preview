@@ -2,84 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.tgoversea.com/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/en/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/jobs.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/jobs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/jobs.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/jobs.html"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/en/jobs.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/jobs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/jobs.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/jobs.html"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/services.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/services.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/services.html"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/en/services.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/services.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/services.html"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/process.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/process.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/process.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/process.html"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/en/process.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/process.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/process.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/process.html"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/about.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/about.html"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/en/about.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/about.html"/>
   </url>
   <url>
+    <loc>https://www.tgoversea.com/profile.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/profile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/profile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/profile.html"/>
+  </url>
+  <url>
+    <loc>https://www.tgoversea.com/en/profile.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/profile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/profile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/profile.html"/>
+  </url>
+  <url>
     <loc>https://www.tgoversea.com/contact.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/contact.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/contact.html"/>
   </url>
   <url>
     <loc>https://www.tgoversea.com/en/contact.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="th" href="https://www.tgoversea.com/contact.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tgoversea.com/en/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tgoversea.com/contact.html"/>

@@ -84,7 +84,7 @@ function graph(c, page) {
 export const FONTS = "https://fonts.googleapis.com/css2?family=Anuphan:wght@400..700&family=Geist:wght@400..700&display=swap";
 
 /* Runs before first paint: applies saved theme, text size and motion preference. */
-export const BOOT = `(function(d){var g=function(k){try{return localStorage.getItem(k)}catch(e){return null}},t=g("tg6-theme"),f=g("tg6-text"),m=g("tg6-motion"),h=g("tg6-hero");if(t)d.setAttribute("data-theme",t);if(f)d.setAttribute("data-text",f);if(h)d.setAttribute("data-hero",h);d.classList.add("js");if(m==="reduce"||matchMedia("(prefers-reduced-motion: reduce)").matches)d.classList.add("rm");setTimeout(function(){if(!d.classList.contains("ok"))d.classList.add("rm")},2500)})(document.documentElement)`;
+export const BOOT = `(function(d){var g=function(k){try{return localStorage.getItem(k)}catch(e){return null}},t=g("tg6-theme"),f=g("tg6-text"),m=g("tg6-motion"),h=g("tg6-hero");if(t)d.setAttribute("data-theme",t==="dark"||t==="night"?"dark":"light");if(f)d.setAttribute("data-text",f);if(h)d.setAttribute("data-hero",h);d.classList.add("js");if(m==="reduce"||matchMedia("(prefers-reduced-motion: reduce)").matches)d.classList.add("rm");setTimeout(function(){if(!d.classList.contains("ok"))d.classList.add("rm")},2500)})(document.documentElement)`;
 
 function head(c, page) {
   const t = page.title[c.lang], d = page.desc[c.lang];
@@ -125,8 +125,8 @@ function head(c, page) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
-${page.preload ? page.preload(c) + "\n" : ""}<link rel="stylesheet" href="${c.root}assets/css/site.css">
-<script src="${c.root}assets/js/site.js" defer></script>
+${page.preload ? page.preload(c) + "\n" : ""}<link rel="stylesheet" href="${c.root}assets/css/site.css${page.file === "profile.html" ? "?v=profile-20261102-2" : ""}">
+<script src="${c.root}assets/js/site.js${page.file === "profile.html" ? "?v=book-20261101-4" : ""}" defer></script>
 <script type="speculationrules">{"prerender":[{"where":{"href_matches":"*.html"},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">${graph(c, page)}</script>
 </head>`;
@@ -165,9 +165,9 @@ function settingsPanel(c, page) {
     <p class="sp-t" id="sp-t">${c.L("ปรับการแสดงผล", "Display settings")}</p>
     <button class="ibtn ibtn--s" type="button" popovertarget="settings" popovertargetaction="hide" aria-label="${c.L("ปิด", "Close")}">${icon("x")}</button>
   </div>
-  <p class="sp-l" id="sp-theme">${c.L("ธีมสี", "Colour theme")}</p>
-  <div class="sp-themes" role="radiogroup" aria-labelledby="sp-theme">
-    ${THEMES.map((t) => `<button type="button" role="radio" aria-checked="false" data-set-theme="${t.id}"><span class="sw${t.id === "auto" ? " sw--auto" : ""}" style="--a:${t.sw[0]};--b:${t.sw[1]};--c:${t.sw[2]}" aria-hidden="true"><i></i><i></i><i></i></span><span>${c.L(t.th, t.en)}</span></button>`).join("\n    ")}
+  <p class="sp-l" id="sp-theme">${c.L("ธีม", "Theme")}</p>
+  <div class="sp-seg sp-seg--2" role="radiogroup" aria-labelledby="sp-theme">
+    ${THEMES.map((t) => `<button type="button" role="radio" aria-checked="false" data-set-theme="${t.id}">${icon(t.icon)}${c.L(t.th, t.en)}</button>`).join("")}
   </div>
   ${page.id === "home" ? heroPicker(c) : ""}
   <p class="sp-l" id="sp-text">${c.L("ขนาดตัวอักษร", "Text size")}</p>

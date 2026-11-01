@@ -228,7 +228,7 @@ export function destList(c) {
 
 /* ---- Dotted world map with destination pins (dots from v1's Natural Earth data) ---- */
 const LAND = (() => {
-  const s = readFileSync(join(dirname(fileURLToPath(import.meta.url)), "..", "..", "assets", "js", "land-dots.js"), "utf8");
+  const s = readFileSync(join(dirname(fileURLToPath(import.meta.url)), "..", "..", "v1", "assets", "js", "land-dots.js"), "utf8");
   return JSON.parse(s.slice(s.indexOf("["), s.lastIndexOf("]") + 1));
 })();
 const MAP = { lon0: -15, lon1: 185, lat0: 66, lat1: -48, k: 4 };

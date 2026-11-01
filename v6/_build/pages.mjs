@@ -6,6 +6,7 @@ import {
   SECTOR_INFO, TRACK, tracker, licenceCard, jobRow, jobCard, STEPS, stepsTrack, promises, destList, worldMap,
   FAQ, faqList, scamChecks, countryOptions, sectorOptions, JOBS, jobPlace, heroBoard, heroDocs, heroSectors
 } from "./content.mjs";
+import { PROFILE, flipbook, profileToc, profileTeaser, preloadCover, profilePdf } from "./profile.mjs";
 
 const preloadImg = (name) => (c) => `<link rel="preload" as="image" href="${photoUrl(c, name)}" imagesrcset="${photoUrl(c, name, 640)} 640w, ${photoUrl(c, name)} 1280w" imagesizes="(max-width: 900px) 100vw, 50vw" fetchpriority="high">`;
 
@@ -518,6 +519,56 @@ const about = {
       ].map(([t, d], i) => `<li data-reveal style="--d:${i}"><span class="team-av" aria-hidden="true">${icon("person")}</span><h3>${t}</h3><p class="team-name">${c.L("ชื่อ–นามสกุล", "Full name")}</p><p>${d}</p></li>`).join("")}
     </ul>
   </div>
+</section>
+
+<section class="sec" id="profile" aria-labelledby="profile-t">
+  <div class="wrap">
+    ${profileTeaser(c)}
+  </div>
+</section>`
+};
+
+/* ------------------------------------------------------------- PROFILE */
+const profile = {
+  id: "profile", file: "profile.html",
+  crumb: { th: "โปรไฟล์บริษัท", en: "Company profile" },
+  title: {
+    th: "โปรไฟล์บริษัท | บริษัทจัดหางาน ทีจี โอเวอร์ซี โซลูชั่น จำกัด",
+    en: "Company Profile | TG Oversea Solutions Recruitment Co., Ltd."
+  },
+  desc: {
+    th: "เปิดอ่านโปรไฟล์บริษัทจัดหางาน ทีจี โอเวอร์ซี โซลูชั่น แบบพลิกหน้า: ประวัติ ทีมผู้บริหาร ประสบการณ์ต่างประเทศ บริการ สายงาน ขั้นตอนการสรรหา และใบอนุญาต ต. 1307/2569 ดาวน์โหลด PDF ได้",
+    en: "Flip through the TG Oversea Solutions company profile: history, leadership, work abroad, services, job categories, recruitment process and licence T. 1307/2569. PDF download available."
+  },
+  preload: preloadCover,
+  schema: (c) => ({
+    "@type": "DigitalDocument", "@id": c.url() + "#profile", name: c.L("โปรไฟล์บริษัท TG Overseas Solutions", "TG Overseas Solutions company profile"),
+    inLanguage: c.lang, numberOfPages: PROFILE.length, encodingFormat: "application/pdf",
+    url: SITE_URL + "/assets/profile/tg-company-profile-" + c.lang + ".pdf", author: { "@id": SITE_URL + "/#org" }
+  }),
+  body: (c) => `
+<section class="phero phero--slim" id="top" aria-labelledby="ph-t">
+  <div class="wrap">
+    ${crumbs(c, profile)}
+    <h1 class="h1 h1--page" id="ph-t" data-split>${c.L("โปรไฟล์บริษัท", "Company profile")}</h1>
+    <p class="lead" data-reveal style="--d:2">${c.L("รู้จักเราให้มากขึ้นก่อนตัดสินใจ ประวัติ ทีมผู้บริหาร ประสบการณ์ต่างประเทศ และใบอนุญาต รวมไว้ในเล่มเดียว เปิดพลิกอ่านได้เลย หรือดาวน์โหลดเป็น PDF", "Get to know us before you decide. Our history, leadership, work abroad and licence in one book. Turn the pages here or download the PDF.")}</p>
+  </div>
+</section>
+<section class="sec sec--book" id="book" aria-label="${c.L("หนังสือโปรไฟล์บริษัท", "Company profile book")}">
+  <div class="wrap">
+    ${flipbook(c)}
+  </div>
+</section>
+<section class="sec sec--alt" id="contents" aria-labelledby="toc-t">
+  <div class="wrap split">
+    <div class="sh sh--sticky">
+      <p class="kick">${icon("book")}${c.L("สารบัญ", "Contents")}</p>
+      <h2 id="toc-t" class="h2" data-split>${c.L("ในเล่มนี้มีอะไรบ้าง", "What's inside")}</h2>
+      <p class="lead">${c.L("เลือกหัวข้อเพื่อเปิดไปยังหน้านั้น", "Pick a topic to open that page.")}</p>
+      <a class="btn btn-line" href="${profilePdf(c)}" download>${icon("download")}${c.L("ดาวน์โหลด PDF", "Download PDF")}</a>
+    </div>
+    ${profileToc(c)}
+  </div>
 </section>`
 };
 
@@ -601,4 +652,4 @@ const contact = {
 </section>`
 };
 
-export const PAGES = [home, jobs, services, process, about, contact];
+export const PAGES = [home, jobs, services, process, about, profile, contact];
