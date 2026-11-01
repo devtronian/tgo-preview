@@ -10,6 +10,7 @@
 /docs/
 
 # Local settings and credentials
+/.serena/
 /.codex/
 /.agents/
 /.aws/
